@@ -8,11 +8,12 @@ import { Sparkles } from "lucide-react"
 import confetti from "canvas-confetti"
 import { characterData, diagnoses } from "./data"
 
-export function MemoryGame() {
+export function Game() {
   const [cards, setCards] = useState<Array<any>>([])
   const [flippedCards, setFlippedCards] = useState<number[]>([])
   const [gameOver, setGameOver] = useState<boolean>(false)
   const [gameWon, setGameWon] = useState<boolean>(false)
+  const [loading, setLoading] = useState<boolean>(false)
   const [psychopathId, setPsychopathId] = useState<number | null>(null)
   const [attempts, setAttempts] = useState<number>(0)
 
@@ -22,6 +23,7 @@ export function MemoryGame() {
   }, [])
 
   const initializeGame = () => {
+    setLoading(true)
     // Shuffle characters
     const shuffledCharacters = [...characterData].sort(
       () => Math.random() - 0.5
@@ -52,6 +54,9 @@ export function MemoryGame() {
     setGameOver(false)
     setGameWon(false)
     setAttempts(0)
+    setTimeout(() => {
+      setLoading(false)
+    }, 1000)
   }
 
   const handleCardClick = (id: number) => {
@@ -133,20 +138,29 @@ export function MemoryGame() {
         </motion.div>
       )}
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
-        {cards.map((card) => (
-          <Card
-            key={card.id}
-            id={card.id}
-            name={card.name}
-            image={card.image}
-            diagnosis={card.diagnosis}
-            isFlipped={flippedCards.includes(card.id)}
-            isPsychopath={card.id === psychopathId}
-            onClick={() => handleCardClick(card.id)}
-          />
-        ))}
-      </div>
+      {loading ? (
+        <div
+          style={{ height: "calc(100vh - 198px)" }}
+          className="flex items-center justify-center"
+        >
+          loading
+        </div>
+      ) : (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
+          {cards.map((card) => (
+            <Card
+              key={card.id}
+              id={card.id}
+              name={card.name}
+              image={card.image}
+              diagnosis={card.diagnosis}
+              isFlipped={flippedCards.includes(card.id)}
+              isPsychopath={card.id === psychopathId}
+              onClick={() => handleCardClick(card.id)}
+            />
+          ))}
+        </div>
+      )}
     </div>
   )
 }
