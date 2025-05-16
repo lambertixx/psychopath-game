@@ -92,3 +92,47 @@
     transform: rotateY(180deg);
   }
 }
+
+.svg-loader {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.path {
+  fill: transparent;
+  stroke-dasharray: 500;
+  stroke-dashoffset: -500;
+  animation: animate 3s forwards infinite;
+}
+
+@keyframes animate {
+  100% {
+    stroke-dashoffset: 500;
+  }
+}
+
+.bg-custom-circle {
+  position: relative;
+  overflow: hidden;
+}
+
+.blur-circle {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 20%;
+  background: radial-gradient(circle, #f48b4b, transparent);
+  filter: blur(70px);
+  z-index: 0;
+}

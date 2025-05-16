@@ -7,6 +7,7 @@ import { motion } from "framer-motion"
 import { Sparkles } from "lucide-react"
 import confetti from "canvas-confetti"
 import { characterData, diagnoses } from "./data"
+import Loading from "./loading"
 
 export function Game() {
   const [cards, setCards] = useState<Array<any>>([])
@@ -143,7 +144,7 @@ export function Game() {
           style={{ height: "calc(100vh - 198px)" }}
           className="flex items-center justify-center"
         >
-          loading
+          <Loading />
         </div>
       ) : (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
