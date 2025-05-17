@@ -1,75 +1,68 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { Card } from "@/components/card"
-import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
-import { Sparkles } from "lucide-react"
-import confetti from "canvas-confetti"
-import { characterData, diagnoses } from "./data"
 import Loading from "./loading"
+import { motion } from "framer-motion"
+import confetti from "canvas-confetti"
+import { Sparkles } from "lucide-react"
+import { Card } from "@/components/card"
+import { useState, useEffect } from "react"
+import { Button } from "@/components/ui/button"
+import { characterData, possiblePsychopaths } from "./data"
 
 export function Game() {
   const [cards, setCards] = useState<Array<any>>([])
-  const [flippedCards, setFlippedCards] = useState<number[]>([])
-  const [gameOver, setGameOver] = useState<boolean>(false)
+  const [attempts, setAttempts] = useState<number>(0)
   const [gameWon, setGameWon] = useState<boolean>(false)
   const [loading, setLoading] = useState<boolean>(false)
+  const [gameOver, setGameOver] = useState<boolean>(false)
+  const [flippedCards, setFlippedCards] = useState<number[]>([])
   const [psychopathId, setPsychopathId] = useState<number | null>(null)
-  const [attempts, setAttempts] = useState<number>(0)
 
   const tpasUrl =
-    "https://www.msdmanuals.com/pt/profissional/transtornos-psiqui%C3%A1tricos/transtornos-de-personalidade/transtorno-de-personalidade-antissocial-tpas"
+    "https://www.msdmanuals.com/pt/profissional/transtornos-psiquiátricos/transtornos-de-personalidade/transtorno-de-personalidade-antissocial-tpas"
 
-  // Initialize game
   useEffect(() => {
     initializeGame()
   }, [])
 
   const initializeGame = () => {
     setLoading(true)
-    // Shuffle characters
-    const shuffledCharacters = [...characterData].sort(
+
+    // 1) Sorteia UM psicopata dentre os 5 possíveis
+    const chosenPsychopath =
+      possiblePsychopaths[
+        Math.floor(Math.random() * possiblePsychopaths.length)
+      ]
+    setPsychopathId(chosenPsychopath.id)
+
+    // 2) Pega 15 personagens “normais” aleatórios
+    const innocents = [...characterData]
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 15)
+
+    // 3) Junta tudo e embaralha
+    const deck = [...innocents, chosenPsychopath].sort(
       () => Math.random() - 0.5
     )
 
-    // Randomly select one character to be the psychopath
-    const psychopathIndex = Math.floor(
-      Math.random() * shuffledCharacters.length
-    )
-    const psychopathCharacterId = shuffledCharacters[psychopathIndex].id
-    setPsychopathId(psychopathCharacterId)
-
-    // Assign diagnoses to characters
-    const shuffledDiagnoses = [...diagnoses].sort(() => Math.random() - 0.5)
-
-    const cardsWithDiagnoses = shuffledCharacters.map((character, index) => {
-      return {
-        ...character,
-        diagnosis:
-          index === psychopathIndex
-            ? "Psicopata"
-            : shuffledDiagnoses[index % shuffledDiagnoses.length],
-      }
-    })
-
-    setCards(cardsWithDiagnoses)
+    setCards(deck)
     setFlippedCards([])
     setGameOver(false)
     setGameWon(false)
     setAttempts(0)
+
+    // 4) Desliga o loading após 1.5s
     setTimeout(() => {
       setLoading(false)
-    }, 1000)
+    }, 1500)
   }
 
   const handleCardClick = (id: number) => {
     if (flippedCards.includes(id) || gameOver) return
 
-    setFlippedCards([...flippedCards, id])
-    setAttempts(attempts + 1)
+    setFlippedCards((prev) => [...prev, id])
+    setAttempts((prev) => prev + 1)
 
-    // Check if clicked card is the psychopath
     if (id === psychopathId) {
       setGameWon(true)
       setGameOver(true)
@@ -78,16 +71,10 @@ export function Game() {
   }
 
   const triggerConfetti = () => {
-    confetti({
-      particleCount: 100,
-      spread: 70,
-      origin: { y: 0.6 },
-    })
+    confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } })
   }
 
-  const restartGame = () => {
-    initializeGame()
-  }
+  const restartGame = () => initializeGame()
 
   return (
     <div className="flex flex-col items-center justify-center w-full max-w-4xl">
