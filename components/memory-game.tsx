@@ -7,7 +7,7 @@ import { Sparkles } from "lucide-react"
 import { Card } from "@/components/card"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { characterData, possiblePsychopaths } from "./data"
+import { commonCharacters, psychopathsToRotate } from "./data"
 
 export function Game() {
   const [cards, setCards] = useState<Array<any>>([])
@@ -30,13 +30,13 @@ export function Game() {
 
     // 1) Sorteia UM psicopata dentre os 5 possíveis
     const chosenPsychopath =
-      possiblePsychopaths[
-        Math.floor(Math.random() * possiblePsychopaths.length)
+      psychopathsToRotate[
+        Math.floor(Math.random() * psychopathsToRotate.length)
       ]
     setPsychopathId(chosenPsychopath.id)
 
     // 2) Pega 15 personagens “normais” aleatórios
-    const innocents = [...characterData]
+    const innocents = [...commonCharacters]
       .sort(() => Math.random() - 0.5)
       .slice(0, 15)
 
