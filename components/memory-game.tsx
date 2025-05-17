@@ -164,11 +164,12 @@ export function Game() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
           {cards.map((card) => (
             <Card
-              key={card.id}
               id={card.id}
+              key={card.id}
               name={card.name}
               image={card.image}
               diagnosis={card.diagnosis}
+              description={card.description}
               isPsychopath={card.id === psychopathId}
               onClick={() => handleCardClick(card.id)}
               isFlipped={flippedCards.includes(card.id)}
