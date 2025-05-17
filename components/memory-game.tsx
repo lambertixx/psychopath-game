@@ -18,6 +18,9 @@ export function Game() {
   const [psychopathId, setPsychopathId] = useState<number | null>(null)
   const [attempts, setAttempts] = useState<number>(0)
 
+  const tpasUrl =
+    "https://www.msdmanuals.com/pt/profissional/transtornos-psiqui%C3%A1tricos/transtornos-de-personalidade/transtorno-de-personalidade-antissocial-tpas"
+
   // Initialize game
   useEffect(() => {
     initializeGame()
@@ -95,11 +98,22 @@ export function Game() {
         className="mb-8 text-center"
       >
         <h1 className="text-4xl font-bold text-white mb-2">
-          Identifique o Psicopata
+          Quem é o verdadeiro psicopata?
         </h1>
         <p className="text-slate-300 mb-4">
-          Gire a carta para revelar o diagnóstico. Ache o personagem
-          diagnosticado com psicopatia para ganhar!
+          Você acha que consegue identificar o verdadeiro ''psicopata''?
+          Analise, compare e use seu raciocínio diagnóstico para encontrar o
+          único personagem cuja hipótese diagnóstica é:{" "}
+          <a
+            href={tpasUrl}
+            target="_blank"
+            className="font-bold text-white underline"
+          >
+            Transtorno de Personalidade Antissocial
+          </a>
+          . <br />
+          Acerte e mostre que você domina a arte do diagnóstico! <br />
+          Erre... e talvez seja você o próximo alvo 👀
         </p>
         <div className="flex justify-center items-center gap-4">
           <div className="bg-slate-700 px-4 py-2 rounded-lg">
@@ -155,9 +169,9 @@ export function Game() {
               name={card.name}
               image={card.image}
               diagnosis={card.diagnosis}
-              isFlipped={flippedCards.includes(card.id)}
               isPsychopath={card.id === psychopathId}
               onClick={() => handleCardClick(card.id)}
+              isFlipped={flippedCards.includes(card.id)}
             />
           ))}
         </div>
