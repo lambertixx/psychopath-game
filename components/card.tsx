@@ -25,7 +25,7 @@ export function Card({
 }: CardProps) {
   return (
     <div
-      className="perspective-1000 h-48 sm:h-56 md:h-64 w-full cursor-pointer"
+      className="perspective-1000 h-[286px] w-full cursor-pointer"
       onClick={onClick}
     >
       <motion.div
@@ -55,7 +55,7 @@ export function Card({
           <h3 className="flex-shrink-0 text-white font-bold text-lg text-center">
             {name}
           </h3>
-          <p className="mt-1 text-slate-300 text-sm w-full text-center h-full overflow-hidden truncate">
+          <p className="mt-1 text-slate-300 text-sm w-full text-center h-full">
             {description}
           </p>
         </div>
