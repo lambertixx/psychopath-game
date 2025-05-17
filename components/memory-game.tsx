@@ -99,8 +99,7 @@ export function Game() {
             Transtorno de Personalidade Antissocial
           </a>
           . <br />
-          Acerte e mostre que você domina a arte do diagnóstico! <br />
-          Erre... e talvez seja você o próximo alvo 👀
+          Acerte e mostre que você domina a arte do diagnóstico!
         </p>
         <div className="flex justify-center items-center gap-4">
           <div className="bg-slate-700 px-4 py-2 rounded-lg">
