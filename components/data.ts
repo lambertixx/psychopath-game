@@ -11,7 +11,7 @@ export const commonCharacters: Character[] = [
     id: 1,
     name: "Ed Gein",
     image: "/ed-gein.webp",
-    diagnosis: "Esquizofrenia Paranoide",
+    diagnosis: "Esquizofrenia Paranoide ou perversão extrema sem empatia?",
     description:
       "Assassino americano que inspirou filmes como “O Massacre da Serra Elétrica”. Desenterrava cadáveres e usava partes do corpo para fazer objetos.",
   },
@@ -19,7 +19,8 @@ export const commonCharacters: Character[] = [
     id: 2,
     name: "Aileen Wuornos",
     image: "/aileen-wuornos.jpg",
-    diagnosis: "Transtorno de Personalidade Borderline",
+    diagnosis:
+      "Transtorno de Personalidade Borderline ou crueldade impulsiva mascarada de trauma?",
     description:
       "Assassina em série americana. Matou homens enquanto trabalhava como prostituta, com comportamento cruel, antissocial e impulsivo.",
   },
@@ -27,7 +28,8 @@ export const commonCharacters: Character[] = [
     id: 3,
     name: "Pablo Escobar",
     image: "/pablo-escobar.jpg",
-    diagnosis: "Transtorno de Personalidade Narcisista",
+    diagnosis:
+      "Transtorno de Personalidade Narcisista ou ambição violenta travestida de justiça social?",
     description:
       "Chefe do cartel de Medellín, buscava fama e poder, agia com frieza e justificava seus atos como “justiça social”.",
   },
@@ -35,7 +37,8 @@ export const commonCharacters: Character[] = [
     id: 4,
     name: "Christopher Scarver",
     image: "/christopher-scarver.jpg",
-    diagnosis: "Esquizofrenia Paranoide",
+    diagnosis:
+      "Esquizofrenia Paranoide ou reação simbólica de um homem negro diante da impunidade racial?",
     description:
       "Matou Jeffrey Dahmer na prisão, justificando o ato como “missão divina” contra o mal.",
   },
@@ -43,7 +46,7 @@ export const commonCharacters: Character[] = [
     id: 5,
     name: "Marilyn Monroe",
     image: "/marilyn-monroe.webp",
-    diagnosis: "Transtorno de Personalidade Borderline",
+    diagnosis: "",
     description:
       "Relações intensas e instáveis, vazio emocional, sofria com depressão, solidão e abuso de substâncias.",
   },
@@ -51,7 +54,7 @@ export const commonCharacters: Character[] = [
     id: 6,
     name: "Brian Wilson",
     image: "/brian-wilson.webp",
-    diagnosis: "Transtorno Esquizoafetivo",
+    diagnosis: "",
     description:
       "Músico dos Beach Boys, teve alucinações auditivas e paranoia, isolou-se por longos períodos.",
   },
@@ -59,7 +62,7 @@ export const commonCharacters: Character[] = [
     id: 7,
     name: "Howard Hughes",
     image: "/howard-hughes.avif",
-    diagnosis: "Transtorno Obsessivo-Compulsivo Grave",
+    diagnosis: "",
     description:
       "Empresário que se isolou, mania de limpeza extrema, fobias e rotinas rígidas.",
   },
@@ -67,7 +70,7 @@ export const commonCharacters: Character[] = [
     id: 8,
     name: "Jack Ruby",
     image: "/jack-ruby.jpg",
-    diagnosis: "Transtorno de Personalidade Narcisista",
+    diagnosis: "",
     description:
       "Assassinou Lee Harvey Oswald buscando reconhecimento público e se considerava herói.",
   },
@@ -75,7 +78,7 @@ export const commonCharacters: Character[] = [
     id: 9,
     name: "Mark Chapman",
     image: "/mark-chapman.jpg",
-    diagnosis: "Esquizofrenia Paranoide",
+    diagnosis: "",
     description:
       "Assassino de John Lennon, dizia ouvir vozes e apresentava ideias delirantes.",
   },
@@ -83,7 +86,7 @@ export const commonCharacters: Character[] = [
     id: 10,
     name: "Charles Manson",
     image: "/charles-manson.jpg",
-    diagnosis: "Transtorno de Personalidade Narcisista",
+    diagnosis: "",
     description:
       "Líder da Família Manson, manipulava seguidores para cometer assassinatos por ele.",
   },
@@ -91,7 +94,7 @@ export const commonCharacters: Character[] = [
     id: 11,
     name: "Jack Torrance",
     image: "/jack-torrance.webp",
-    diagnosis: "Transtorno Psicótico",
+    diagnosis: "",
     description:
       "Protagonista de O Iluminado: alucinações, paranoia e perda de contato com a realidade.",
   },
@@ -99,7 +102,7 @@ export const commonCharacters: Character[] = [
     id: 12,
     name: "Coringa",
     image: "/coringa.webp",
-    diagnosis: "Borderline, Esquizotípico e Psicótico",
+    diagnosis: "",
     description:
       "Vilão da DC com instabilidade emocional, excêntrico e episódios psicóticos.",
   },
@@ -107,7 +110,7 @@ export const commonCharacters: Character[] = [
     id: 13,
     name: "Tyler Durden",
     image: "/tyler-durden.webp",
-    diagnosis: "Transtorno Dissociativo de Identidade e Sociopatia",
+    diagnosis: "",
     description:
       "Personagem de Clube da Luta: manipulador, anárquico e sem empatia.",
   },
@@ -115,7 +118,7 @@ export const commonCharacters: Character[] = [
     id: 14,
     name: "Arya Stark",
     image: "/arya-stark.webp",
-    diagnosis: "Transtorno de Personalidade Borderline",
+    diagnosis: "",
     description:
       "De Game of Thrones: frieza emocional, impulsividade e busca obsessiva por vingança.",
   },
@@ -123,7 +126,7 @@ export const commonCharacters: Character[] = [
     id: 15,
     name: "Tommy Shelby",
     image: "/tommy-shelby.webp",
-    diagnosis: "TEPT e Tuberculoma",
+    diagnosis: "",
     description:
       "Protagonista de Peaky Blinders: sofre com PTSD, flashbacks e apatia emocional.",
   },
@@ -131,7 +134,7 @@ export const commonCharacters: Character[] = [
     id: 16,
     name: "Sherlock Holmes",
     image: "/sherlock-holmes.webp",
-    diagnosis: "TOC e Altas Habilidades Cognitivas",
+    diagnosis: "",
     description:
       "Obsessivo e metódico, socialmente limitado mas extremamente inteligente.",
   },
@@ -139,7 +142,7 @@ export const commonCharacters: Character[] = [
     id: 17,
     name: "Dr. House",
     image: "/dr-house.webp",
-    diagnosis: "Transtorno de Personalidade Narcisista e Vício",
+    diagnosis: "",
     description:
       "Egocêntrico, arrogante e dependente de analgésicos, com moralidade complexa.",
   },
@@ -147,7 +150,7 @@ export const commonCharacters: Character[] = [
     id: 18,
     name: "Martha Scott",
     image: "/martha-scott.webp",
-    diagnosis: "TOC, Borderline e Síndrome de Clérambault",
+    diagnosis: "",
     description:
       "Personagem de Bebê Rena, com erotomania e comportamento impulsivo.",
   },
@@ -155,7 +158,7 @@ export const commonCharacters: Character[] = [
     id: 19,
     name: "Thanos",
     image: "/thanos.jpg",
-    diagnosis: "Transtorno de Personalidade Narcisista e Megalomania",
+    diagnosis: "",
     description:
       "Vilão dos Vingadores: delírios de grandeza e missão genocida.",
   },
@@ -163,7 +166,7 @@ export const commonCharacters: Character[] = [
     id: 20,
     name: "Nina Sayers",
     image: "/nina-sayers.webp",
-    diagnosis: "Transtorno Psicótico",
+    diagnosis: "",
     description:
       "Protagonista de Cisne Negro: alucinações e colapso mental sob pressão.",
   },
@@ -171,7 +174,7 @@ export const commonCharacters: Character[] = [
     id: 21,
     name: "Susanna Kaysen",
     image: "/susanna-kaysen.png",
-    diagnosis: "Transtorno Borderline",
+    diagnosis: "",
     description:
       "Protagonista de Garota, Interrompida: instabilidade emocional e impulsividade.",
   },
@@ -179,14 +182,14 @@ export const commonCharacters: Character[] = [
     id: 22,
     name: "Rainha Má",
     image: "/rainha-ma.jpg",
-    diagnosis: "Transtorno de Personalidade Narcisista",
+    diagnosis: "",
     description: "Vilã de Branca de Neve: egocêntrica, invejosa e cruel.",
   },
   {
     id: 23,
     name: "Norman Bates",
     image: "/norman-bates.jpg",
-    diagnosis: "Transtorno Psicótico e Dissociativo",
+    diagnosis: "",
     description:
       "Assassino de Psicose: convive com a identidade da mãe e delírios.",
   },
@@ -194,7 +197,7 @@ export const commonCharacters: Character[] = [
     id: 24,
     name: "Kevin Wendell Crumb",
     image: "/kevin-wendell-crumb.jpeg",
-    diagnosis: "Transtorno Dissociativo de Identidade",
+    diagnosis: "",
     description:
       "Personagem de Fragmentado: múltiplas personalidades, incluindo a “Fera”.",
   },
@@ -202,7 +205,7 @@ export const commonCharacters: Character[] = [
     id: 25,
     name: "Amy Dunne",
     image: "/amy-dunne.jpg",
-    diagnosis: "Transtornos Narcisista e Borderline",
+    diagnosis: "",
     description:
       "Protagonista de Garota Exemplar: manipuladora e imprevisível.",
   },
@@ -210,7 +213,7 @@ export const commonCharacters: Character[] = [
     id: 26,
     name: "BoJack Horseman",
     image: "/bojack-horseman.jpg",
-    diagnosis: "Borderline, Depressão Maior e Abuso de Substâncias",
+    diagnosis: "",
     description:
       "Antierói animado: autodestrutivo, depressivo e com vínculos instáveis.",
   },
@@ -218,7 +221,7 @@ export const commonCharacters: Character[] = [
     id: 27,
     name: "Joe Goldberg",
     image: "/joe-goldberg.webp",
-    diagnosis: "Borderline, TOC e Erotomania",
+    diagnosis: "",
     description:
       "De You: obcecado, persegue e manipula sob justificativas românticas.",
   },
@@ -226,7 +229,7 @@ export const commonCharacters: Character[] = [
     id: 28,
     name: "Walter White",
     image: "/walter-white.jpg",
-    diagnosis: "Transtorno de Personalidade Narcisista",
+    diagnosis: "",
     description:
       "De Breaking Bad: manipulador e obcecado por controle e reconhecimento.",
   },
@@ -234,7 +237,7 @@ export const commonCharacters: Character[] = [
     id: 29,
     name: "Dexter Morgan",
     image: "/dexter-morgan.jpeg",
-    diagnosis: "Transtorno Psicótico",
+    diagnosis: "",
     description:
       "De Dexter: assassino serial com “código moral” e dissociação emocional.",
   },
@@ -242,14 +245,14 @@ export const commonCharacters: Character[] = [
     id: 30,
     name: "Loki",
     image: "/loki.webp",
-    diagnosis: "Transtornos Narcisista e Borderline",
+    diagnosis: "",
     description: "Vilão da Marvel: manipulador, busca poder e validação.",
   },
   {
     id: 31,
     name: "Batman",
     image: "/batman.webp",
-    diagnosis: "TEPT",
+    diagnosis: "",
     description:
       "Herói da DC traumatizado pela morte dos pais, obsessivo e isolado.",
   },
@@ -257,7 +260,7 @@ export const commonCharacters: Character[] = [
     id: 32,
     name: "Rainha de Copas",
     image: "/rainha-de-copas.jpg",
-    diagnosis: "Transtorno de Personalidade Narcisista",
+    diagnosis: "",
     description:
       "De Alice no País das Maravilhas: tirânica e vaidosa, reações explosivas.",
   },
@@ -265,7 +268,7 @@ export const commonCharacters: Character[] = [
     id: 33,
     name: "Light Yagami",
     image: "/light-yagami.jpg",
-    diagnosis: "Transtornos Narcisista e Megalomania",
+    diagnosis: "",
     description:
       "De Death Note: quer ser “deus” num mundo novo, justifica assassinatos.",
   },
@@ -273,7 +276,7 @@ export const commonCharacters: Character[] = [
     id: 34,
     name: "Harley Quinn",
     image: "/harley-quinn.jpg",
-    diagnosis: "Transtorno Psicótico e Borderline",
+    diagnosis: "",
     description:
       "De DC: impulsiva, instável e dependente emocionalmente do Coringa.",
   },
@@ -281,7 +284,7 @@ export const commonCharacters: Character[] = [
     id: 35,
     name: "Jack Sparrow",
     image: "/jack-sparrow.jpg",
-    diagnosis: "Alcoolismo Crônico e Transtorno Histriônico",
+    diagnosis: "",
     description:
       "De Piratas do Caribe: excêntrico, teatral e dependente do álcool.",
   },
@@ -289,7 +292,7 @@ export const commonCharacters: Character[] = [
     id: 36,
     name: "Pearl",
     image: "/pearl.png",
-    diagnosis: "Transtorno Borderline ou Histriônico",
+    diagnosis: "",
     description:
       "De Pearl/X: busca reconhecimento, impulsiva e emocionalmente explosiva.",
   },
@@ -297,7 +300,7 @@ export const commonCharacters: Character[] = [
     id: 37,
     name: "Carrie White",
     image: "/carrie-white.webp",
-    diagnosis: "Esquizoafetivo e Psicose Breve",
+    diagnosis: "",
     description:
       "De Carrie: vítima de bullying com alucinações e explosão violenta.",
   },
@@ -305,14 +308,14 @@ export const commonCharacters: Character[] = [
     id: 38,
     name: "Cersei Lannister",
     image: "/cersei-lannister.jpeg",
-    diagnosis: "Narcisista com Traços Paranoides",
+    diagnosis: "",
     description: "De GoT: manipuladora, vingativa e desconfiada de todos.",
   },
   {
     id: 39,
     name: "Steve Jobs",
     image: "/steve-jobs.jpg",
-    diagnosis: "Transtorno Obsessivo-Compulsivo",
+    diagnosis: "",
     description:
       "Perfeccionista extremo, obsessivo com detalhes e controle total.",
   },
@@ -323,7 +326,7 @@ export const psychopathsToRotate: Character[] = [
     id: 1002,
     name: "Patrick Bateman",
     image: "/patrick-bateman.webp",
-    diagnosis: "Psicopata",
+    diagnosis: "Psicopata… Será mesmo?",
     description:
       "Protagonista de American Psycho: executivo narcisista e violento.",
   },
@@ -331,14 +334,14 @@ export const psychopathsToRotate: Character[] = [
     id: 1003,
     name: "Lord Voldemort",
     image: "/lord-voldemort.webp",
-    diagnosis: "Psicopata",
+    diagnosis: "Psicopata… Será mesmo?",
     description: "Vilão de Harry Potter: frio, megalomaníaco e sem empatia.",
   },
   {
     id: 1004,
     name: "Hannibal Lecter",
     image: "/hannibal-lecter.webp",
-    diagnosis: "Psicopata",
+    diagnosis: "Psicopata… Será mesmo?",
     description:
       "De O Silêncio dos Inocentes: brilhante, manipulador e canibal.",
   },
@@ -346,7 +349,7 @@ export const psychopathsToRotate: Character[] = [
     id: 1005,
     name: "Anton Chigurh",
     image: "/anton-chigurh.jpg",
-    diagnosis: "Psicopata",
+    diagnosis: "Psicopata… Será mesmo?",
     description:
       "De Onde os Fracos Não Têm Vez: implacável, sem remorso e metódico.",
   },
@@ -354,14 +357,14 @@ export const psychopathsToRotate: Character[] = [
     id: 1006,
     name: "Ted Bundy",
     image: "/ted-bundy.jpg",
-    diagnosis: "Psicopata",
+    diagnosis: "Psicopata… Será mesmo?",
     description: "Serial killer real: carismático, manipulador e violento.",
   },
   {
     id: 1007,
     name: "Darth Vader",
     image: "/darth-vader.jpg",
-    diagnosis: "Psicopata",
+    diagnosis: "Psicopata… Será mesmo?",
     description:
       "De Star Wars: implacável, obedece ao lado sombrio e sem piedade.",
   },
@@ -369,7 +372,7 @@ export const psychopathsToRotate: Character[] = [
     id: 1008,
     name: "Marla Grayson",
     image: "/marla-grayson.jpg",
-    diagnosis: "Psicopata",
+    diagnosis: "Psicopata… Será mesmo?",
     description:
       "Protagonista de Eu Me Importo: manipuladora e sem escrúpulos.",
   },
