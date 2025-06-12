@@ -87,7 +87,7 @@ export function Card({
               </div>
             </>
           ) : (
-            <div className="text-center px-4 py-3 rounded-lg text-xl font-bold w-full flex items-center justify-center min-h-[100px] bg-slate-600 text-slate-200">
+            <div className="text-center px-4 py-3 rounded-lg font-bold w-full flex items-center justify-center min-h-[100px] bg-slate-600 text-slate-200">
               {diagnosis}
             </div>
           )}
