@@ -320,13 +320,6 @@ export const commonCharacters: Character[] = [
 
 export const psychopathsToRotate: Character[] = [
   {
-    id: 1001,
-    name: "Eric Cartman",
-    image: "/eric-cartman.jpg",
-    diagnosis: "Psicopata",
-    description: "Personagem de South Park: cruel, manipulador e sem remorso.",
-  },
-  {
     id: 1002,
     name: "Patrick Bateman",
     image: "/patrick-bateman.webp",

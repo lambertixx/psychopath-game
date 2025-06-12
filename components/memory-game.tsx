@@ -54,7 +54,8 @@ export function Game() {
     // 4) Desliga o loading após 1.5s
     setTimeout(() => {
       setLoading(false)
-    }, 1500)
+    }, 10)
+    // }, 1500)
   }
 
   const handleCardClick = (id: number) => {
